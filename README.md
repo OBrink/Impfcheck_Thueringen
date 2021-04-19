@@ -15,7 +15,7 @@ If any changes are detected, it will make create a pop-up message to notify you.
     pip install beautifulsoup4
 
 
-Simply run 
+- Simply run 
 
 
     python  impf_checker.py
