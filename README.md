@@ -1,6 +1,6 @@
 # Impfcheck_Thueringen
 This repository contains a very simple script that checks every 10 minutes 
-if the Thuringian vaccination information site has changed since the last check.
+if the Thuringian vaccination information site (https://www.impfen-thueringen.de/terminvergabe.html) has changed since the last check.
 If any changes are detected, it will make create a pop-up message to notify you.
 
 ### Get started
