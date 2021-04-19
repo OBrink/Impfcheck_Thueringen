@@ -22,4 +22,4 @@ If any changes are detected, it creates a pop-up message to notify you.
 
 The script will then run for 10 hours and check every 10 minutes if 
 something has changed since the last check. The text from the page 
-is saved in impfen_thueringen.txt in same directory.
+is saved in impfen_thueringen.txt in the same directory.
