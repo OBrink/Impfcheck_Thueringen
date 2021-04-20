@@ -8,7 +8,7 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 
 
-def get_impfen_thueringen_content() -> bool:
+def get_impfen_thueringen_content() -> str:
 	'''This function gets checks the vaccination site where it says for which groups  registration 
 	is open right now and returns the content as a string. <script> parts are deleted as they change
 	whenever the page is loaded.'''
@@ -22,7 +22,7 @@ def get_impfen_thueringen_content() -> bool:
 	return site_text.encode('utf8')
 
 
-def popupmsg(message: str):
+def popupmsg(message: str) -> None:
 	'''This function creates a popup window that shows a given message'''
 	popup = tk.Tk()
 	popup.wm_title("!")
