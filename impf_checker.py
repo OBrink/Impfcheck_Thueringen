@@ -5,8 +5,8 @@ import tkinter as tk
 from tkinter import ttk
 import time
 from datetime import datetime
+import random
 from bs4 import BeautifulSoup
-
 
 def get_impfen_thueringen_content() -> str:
 	'''This function gets checks the vaccination site where it says for which groups  registration 
@@ -19,7 +19,9 @@ def get_impfen_thueringen_content() -> str:
 	# Get text
 	soup = BeautifulSoup(html_string, features = 'lxml')
 	site_text = str(soup.get_text())
-	return site_text.encode('utf8')
+	site_text = str(site_text.encode('utf8'))
+	site_text = site_text.replace('\\n', '')
+	return site_text
 
 
 def popupmsg(message: str) -> None:
@@ -66,7 +68,7 @@ def main():
 			print('Last checked at ' + str(timestamp) + '. Result: Something has changed! Go check if you can register.')
 		else:
 			print('Last checked at ' + str(timestamp) + '. Result: Nothing has changed!')
-		time.sleep(random.choice(np.arange(300,900)))
+		time.sleep(random.choice(range(300,900)))
 	sys.exit(1)
 
 
