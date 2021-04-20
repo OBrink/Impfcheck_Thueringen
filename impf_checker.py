@@ -57,7 +57,7 @@ def check_impfen_thueringen() -> bool:
 
 
 def main():
-	'''This script runs for 10 hours and checks every 10 minutes if https://www.impfen-thueringen.de/terminvergabe.html has
+	'''This script runs for approximately 10 hours (60 checks) and checks every 10 minutes if https://www.impfen-thueringen.de/terminvergabe.html has
 	changed since the last check. The html string is saved in the file impfen_thueringen.html (in the same folder as the script.)'''
 	for _ in range(60):
 		check = check_impfen_thueringen()
@@ -66,7 +66,7 @@ def main():
 			print('Last checked at ' + str(timestamp) + '. Result: Something has changed! Go check if you can register.')
 		else:
 			print('Last checked at ' + str(timestamp) + '. Result: Nothing has changed!')
-		time.sleep(600)
+		time.sleep(random.choice(np.arange(300,900)))
 	sys.exit(1)
 
 
